@@ -1,0 +1,242 @@
+*, ::before, ::after{
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  margin: 0;
+  font-family: monospace, sans-serif;
+  background-color:#11ffff;
+}
+main{
+  max-height: 100vh;
+  text-align: center;
+}
+#container{
+  width: clamp(10vw, 22rem, 95vw);
+  margin:auto;
+  border: 2px solid #000;
+  box-shadow: .3rem .1rem 1rem #000;
+  border-radius: .5rem;
+  overflow: hidden;
+  background-color:#fff;
+}
+/* search form */
+#search-form{
+  padding: 1rem .5rem;
+}
+label{
+  display: block;
+  margin-bottom: .7rem;
+  margin-right: .3rem;
+}
+/* search button style */
+#search-button{
+  width: 2rem;
+  height: 2rem;
+  margin-left: .7rem;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #11ff11;
+}
+#search-button:hover{
+  background-color: #000;
+}
+#search-button:hover #lens-head,
+#search-button:hover #lens-body{
+  border: 1px solid #11ff11;
+}
+/* search icon */
+#search-button div{
+  border: 1px solid #000;
+  height: .7rem;
+}
+#lens-head{
+  width: .7rem;
+  margin-top: .4rem;
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+#lens-body{
+  width: 0;
+  transform: rotate(50deg)
+              translateY(.42rem)
+              translateX(.1rem);
+}
+
+/* creature data */
+#creature-data{
+  width: 90%;
+  height: 27.5rem;
+  margin: auto;
+}
+#creature-name{
+  font-size: 1.3rem;
+}
+#types{
+  gap:.5rem;
+}
+.type{
+  padding: .3rem .5rem;
+  border-radius: .4rem;
+  font-size: .8rem;
+}
+/* icons for type and base element */
+.type::after, .base::before{
+  content:'';
+  display:inline-block;
+  width:1rem;
+  height: 1rem;
+  margin-inline: .3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+#special{
+  margin-top:1rem;
+  border-bottom: 1px solid #000;
+}
+#stats{
+  display:grid;
+  height: 50%;
+  margin-top:1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+}
+
+/* common styles */
+.data{
+  margin: .4rem;
+}
+.base{
+  display: none;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bold{
+  font-weight: 600;
+}
+
+/* types colors and icons */
+.water{
+  background-color:#11ffff;
+}
+.water::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/drop.png?raw=true');
+}
+.grass{
+  background-color: #11ff11;
+}
+.grass::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/grass.png?raw=true');
+}
+.fire{
+  background-color: #ff4411;
+}
+.fire::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/fire%20(1).png?raw=true');
+}
+.poison{
+  background-color: #9cbb9c;
+}
+.poison::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/skeleton.png?raw=true');
+}
+.rock{
+  background-color: #d88647;
+}
+.rock::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/rock.png?raw=true');
+}
+.electric{
+  background-color: #ffff11;
+}
+.electric::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/flash.png?raw=true');
+}
+.dragon{
+  background-color:#a190e4;
+}
+.dragon::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/dragon.png?raw=true');
+}
+.ice{
+  background-color:#cdf2f6;
+}
+.ice::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/snowflake.png?raw=true');
+}
+.fairy{
+  background-color:#f2fbd7;
+}
+.fairy::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/wings.png?raw=true');
+}
+.ground{
+  background-color:#dec587;
+}
+.ground::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/symbol.png?raw=true');
+}
+.flying{
+  background-color:#e2e0ea;
+}
+.flying::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/wings%20(1).png?raw=true');
+}
+.bug{
+  background-color:#d7f68a;
+}
+.bug::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/bug.png?raw=true');
+}
+.dark{
+  background-color:#1b0672;
+  color: white;
+}
+.dark::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/moon%20(1).png?raw=true');
+}
+.psychic{
+  background-color:#84f06b;
+}
+.psychic::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/psychic.png?raw=true');
+}
+.steel{
+  background-color:#b1b1b1;
+}
+.steel::after{
+  background-image: url('https://raw.githubusercontent.com/Frontier101/screenshots/refs/heads/main/beam.png');
+}
+.ghost{
+  background-color:#c8c3c3;
+}
+.ghost::after{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/ghost.png?raw=true');
+}
+
+/* base icons */
+#h-points::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/hp.png?raw=true')
+}
+#sp::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/speed.png?raw=true')
+}
+#atk::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/sword.png?raw=true')
+}
+#def::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/shield.png?raw=true')
+}
+#sp-atk::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/sp-attack.png?raw=true')
+}
+#sp-def::before{
+  background-image: url('https://github.com/Frontier101/screenshots/blob/main/sp-shield.png?raw=true')
+}
