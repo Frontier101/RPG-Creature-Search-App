@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Creature Search App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex">
+  <main>
+    <h1>RPG Creature Search App</h1>
+    <div id="container">
+      <form id="search-form" action="">
+        <label for="search-input">Search for creature Name or Id: </label>
+        <div class="flex">
+          <input type="text" id="search-input" required>
+          <button title="Search" type="submit" id="search-button">
+            <div id="lens-head">
+            <div id="lens-body"></div>
+          </button>
+        </div>
+      </form>
+      <div id="creature-data">
+        <div class="flex">
+          <div id="creature-name" class="data bold"></div>
+          <div id="creature-id" class="data"></div>
+        </div>
+        <div class="flex">
+          <div id="weight" class="data"></div>
+          <div id="height" class="data"></div>
+        </div>
+        <div id="types" class="data flex"></div>
+        <div id="special">
+          <div id="sp-name" class="data bold"></div>
+          <div id="sp-description" class="data"></div>
+        </div>
+        <div id="stats">
+          <div>
+            <div id="h-points" class="base bold">HP: </div>
+            <div id="hp" class="data"></div>
+          </div>
+          <div>
+            <div id="sp" class="base bold">Speed: </div>
+            <div id="speed" class="data"></div>
+          </div>
+          <div>
+            <div id="atk" class="base bold">Attack: </div>
+            <div id="attack" class="data"></div>
+          </div>
+          <div>
+            <div id="def" class="base bold">Defense: </div>
+            <div id="defense" class="data"></div>
+          </div>
+          <div>
+            <div id="sp-atk" class="base bold">Sp. Attack: </div>
+            <div id="special-attack" class="data"></div>
+          </div>
+          <div>
+            <div id="sp-def" class="base bold">Sp. Defense</div>
+            <div id="special-defense" class="data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script type="module" src="script.js"></script>
+</html>
